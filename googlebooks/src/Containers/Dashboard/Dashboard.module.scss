@@ -1,0 +1,15 @@
+@import "./../../styling/palette/palette.module.scss";
+@import "./../../styling/typography/typography.module.scss";
+
+.container {
+    background-color: $lightColour;
+
+    &__image {
+        max-width: 1rem;
+    }
+
+    &__header {
+        font-family: $primaryHeading;
+        color: $primaryColour;
+    }
+}

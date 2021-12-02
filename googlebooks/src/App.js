@@ -1,4 +1,3 @@
-import "./App.css";
 import Dashboard from "./Containers/Dashboard";
 
 const App = () => {

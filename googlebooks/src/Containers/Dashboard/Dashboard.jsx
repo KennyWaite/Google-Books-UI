@@ -13,24 +13,42 @@ const Dashboard = () => {
             "https://www.googleapis.com/books/v1/volumes?q={search terms}",
         );
         const data = await response.json();
-        setBooks(data);
+        setBooks(data.items);
     };
 
-    const searchFilter = () => {
-        {
-            data.filter((book) => {
-                return (book = { book });
-            });
-        }
+    const updateBooks = () => {
+        setDisplayedBooks(
+            books.filter((book) => {
+                return book.title.includes(search);
+            }),
+        );
     };
+
+    // const searchFilter = () => {
+    //     {
+    //         data.filter((book) => {
+    //             return (book = { book });
+    //         });
+    //     }
+    // };
+
+    useEffect(() => {
+        updateBooks();
+    }, [search, books]);
 
     useEffect(() => {
         getBooks();
     }, []);
 
     return (
-        <div>
-            <h3>Books List</h3>
+        <div className={styles.container}>
+            <img
+                src="/Users/kennywaite/Desktop/NOLOGY/VSC/Google-Books-UI/googlebooks/src/imgs/BookShelf.jpeg"
+                className={styles.container__image}
+                alt="bookshelf"></img>
+            <h2 className={styles.container__header}>
+                Search for Google Books
+            </h2>
             <SearchBar handleSearch={setSearch} />
             <BooksList data={books} />
         </div>

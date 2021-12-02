@@ -1,0 +1,21 @@
+@import "./../../styling/palette/palette.module.scss";
+@import "./../../styling/typography/typography.module.scss";
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    border-color: ;
+
+    &__textArea {
+        width: 500px;
+        height: 80px;
+    }
+
+    &__button {
+        width: 100px;
+        height: 80px;
+        margin: 20px;
+        border-radius: 20%;
+        font-family: $primaryHeading;
+    }
+}
