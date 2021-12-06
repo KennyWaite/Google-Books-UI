@@ -18,7 +18,8 @@ export const SearchBar = ({ handleSearch }) => {
                 className={styles.search_textArea}
                 onChange={handleChange}
                 type="text"
-                placeholder="Search here"></input>
+                placeholder="Search here"
+            />
             <button
                 className={styles.search_button}
                 onClick={handleClick}

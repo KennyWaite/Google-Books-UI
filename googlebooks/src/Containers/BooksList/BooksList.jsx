@@ -4,8 +4,8 @@ import BooksCards from "../../Components/BooksCards";
 const BooksList = ({ data }) => {
     return (
         <div className={styles.bookList}>
-            {data.map((book) => {
-                return <BooksCards book={book} />;
+            {data.map((book, index) => {
+                return <BooksCards book={book} index={index} />;
             })}
         </div>
     );
