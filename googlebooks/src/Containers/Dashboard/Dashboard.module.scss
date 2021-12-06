@@ -11,5 +11,7 @@
     &__header {
         font-family: $primaryHeading;
         color: $primaryColour;
+        display: flex;
+        justify-content: center;
     }
 }
